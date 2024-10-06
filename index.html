@@ -17,31 +17,66 @@
     <body>
         
         <header class="h-[48px] lg:h-[12vh] flex items-center justify-between w-full bg-black fixed top-0">
-            <div class="pl-4 h-full flex items-center">
-                <img class="h-3/4" src="img/logo.svg" alt="">
-                <ul class="flex h-full items-center space-x-4 lg:space-x-8 text-white pl-8 relative">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Bacolod</a></li>
-                    <li><a href="#">Cebu</a></li>
-                    <li><a href="#">Davao</a></li>
-                    <li><a href="#">Iloilo</a></li>
-                    <li><a href="#">Manila</a></li>
-                    <li><a href="#">Pampanga</a></li>
-                    <li><a href="#">Tacloban</a></li>
-                    <li><a href="#">Zamboanga</a></li>
-        
-                    <!-- SuperBalita Dropdown -->
-                    <li class="relative group">
-                        <a href="#" class="hover:text-yellow-300">SuperBalita</a>
-                        <!-- Dropdown Menu -->
-                        <ul class="absolute left-0 mt-2 hidden bg-gray-800 text-white group-hover:block min-w-[180px]">
-                            <li class="hover:bg-gray-700 px-4 py-2"><a href="#">SuperBalita Cebu</a></li>
-                            <li class="hover:bg-gray-700 px-4 py-2"><a href="#">SuperBalita Davao</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="pl-4 h-full flex items-center justify-between w-full">
+              <!-- Logo -->
+              <img class="h-3/4" src="img/logo.svg" alt="Logo">
+          
+              <!-- Menu items for larger screens -->
+              <ul class="hidden lg:flex h-full items-center space-x-4 lg:space-x-8 text-white pl-8 relative">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Bacolod</a></li>
+                <li><a href="#">Cebu</a></li>
+                <li><a href="#">Davao</a></li>
+                <li><a href="#">Iloilo</a></li>
+                <li><a href="#">Manila</a></li>
+                <li><a href="#">Pampanga</a></li>
+                <li><a href="#">Tacloban</a></li>
+                <li><a href="#">Zamboanga</a></li>
+          
+                <!-- SuperBalita Dropdown -->
+                <li class="relative group">
+                  <a href="#" class="hover:text-yellow-300">SuperBalita</a>
+                  <!-- Dropdown Menu -->
+                  <ul class="absolute left-0 mt-2 hidden bg-gray-800 text-white group-hover:block min-w-[180px]">
+                    <li class="hover:bg-gray-700 px-4 py-2"><a href="#">SuperBalita Cebu</a></li>
+                    <li class="hover:bg-gray-700 px-4 py-2"><a href="#">SuperBalita Davao</a></li>
+                  </ul>
+                </li>
+              </ul>
+          
+              <!-- Burger Menu for Mobile -->
+              <button id="burger" class="lg:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+              </button>
             </div>
-        </header>
+          
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden lg:hidden bg-black w-full">
+              <ul class="flex flex-col items-center text-white space-y-4 py-4">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Bacolod</a></li>
+                <li><a href="#">Cebu</a></li>
+                <li><a href="#">Davao</a></li>
+                <li><a href="#">Iloilo</a></li>
+                <li><a href="#">Manila</a></li>
+                <li><a href="#">Pampanga</a></li>
+                <li><a href="#">Tacloban</a></li>
+                <li><a href="#">Zamboanga</a></li>
+                <li><a href="#">SuperBalita</a></li>
+              </ul>
+            </div>
+          
+            <script>
+              const burger = document.getElementById('burger');
+              const mobileMenu = document.getElementById('mobileMenu');
+              burger.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+              });
+            </script>
+          </header>
+          
         
         
         
@@ -225,6 +260,8 @@
                 },
             });
         </script>
+
+
 
         
     </body>
