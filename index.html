@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="icon" type="image/x-icon" href="img/logo.svg">
         <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin="">
         <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -14,7 +15,36 @@
 
     </head>
     <body>
-        <header class="h-[48px] lg:h-[12vh] w-full bg-black fixed top-0"></header>
+        
+        <header class="h-[48px] lg:h-[12vh] flex items-center justify-between w-full bg-black fixed top-0">
+            <div class="pl-4 h-full flex items-center">
+                <img class="h-3/4" src="img/logo.svg" alt="">
+                <ul class="flex h-full items-center space-x-4 lg:space-x-8 text-white pl-8 relative">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Bacolod</a></li>
+                    <li><a href="#">Cebu</a></li>
+                    <li><a href="#">Davao</a></li>
+                    <li><a href="#">Iloilo</a></li>
+                    <li><a href="#">Manila</a></li>
+                    <li><a href="#">Pampanga</a></li>
+                    <li><a href="#">Tacloban</a></li>
+                    <li><a href="#">Zamboanga</a></li>
+        
+                    <!-- SuperBalita Dropdown -->
+                    <li class="relative group">
+                        <a href="#" class="hover:text-yellow-300">SuperBalita</a>
+                        <!-- Dropdown Menu -->
+                        <ul class="absolute left-0 mt-2 hidden bg-gray-800 text-white group-hover:block min-w-[180px]">
+                            <li class="hover:bg-gray-700 px-4 py-2"><a href="#">SuperBalita Cebu</a></li>
+                            <li class="hover:bg-gray-700 px-4 py-2"><a href="#">SuperBalita Davao</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        
+        
+        
         <section class="mt-7 lg:mt-16 h-[500px] lg:h-[56vh]">
             <div class="h-full w-full bg-[url('img/sunstarbuilding.jpg')] bg-no-repeat bg-cover bg-center flex flex-col justify-center px-4">
                 <h1 class="text-5xl md:text-4xl lg:text-5xl text-[#ffeb3b] font-['Roboto'] font-semibold leading-snug md:leading-normal">
@@ -33,9 +63,11 @@
             <div class="pb-4 w-full">
                 <h1 class="text-2xl text-center pt-16 pb-8">SALES TEAM</h1>
                 <p class="text-xl text-center pb-16">Partner with us to grow your brand and connect with your target market.</p>
-                <div class="w-full flex justify-center">
-                    <!-- Desktop view, display flex for horizontal alignment -->
-                    <div class="hidden md:flex w-[98%] justify-evenly">
+                
+                <!-- Grid layout for medium and larger screens -->
+                <div class="hidden md:flex w-full justify-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-[98%] justify-items-center">
+                        <!-- First card -->
                         <div class="w-[300px] h-[500px] bg-white shadow-xl">
                             <div class="w-full h-[290px] bg-black overflow-hidden">
                                 <img class="w-full" src="staff/Ballespin.jpg" alt="">
@@ -50,7 +82,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <!-- Second card -->
                         <div class="w-[300px] h-[500px] bg-white shadow-xl">
                             <div class="w-full h-[290px] bg-black overflow-hidden">
                                 <img class="w-full" src="staff/Bastinen.jpg" alt="">
@@ -65,7 +97,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- Third card -->
                         <div class="w-[300px] h-[500px] bg-white shadow-xl">
                             <div class="w-full h-[290px] bg-black overflow-hidden">
                                 <img class="w-full" src="staff/Libor.jpg" alt="">
@@ -80,7 +112,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- Fourth card -->
                         <div class="w-[300px] h-[500px] bg-white shadow-xl">
                             <div class="w-full h-[290px] bg-black overflow-hidden">
                                 <img class="w-full" src="staff/Villarin.jpg" alt="">
@@ -89,245 +121,99 @@
                                 <h1 class="text-xl">Gerramae O. Villarin</h1>
                                 <h2 class="pb-4 text-gray-400">gerravillarin.sunstar@gmail.com</h2>
                                 <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                <h2 class="pb-2">+63915-392-0440</h2>
+                                <h2 class="pb-2">+639153920440</h2>
                                 <div class="w-full">
                                     <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Swiper for mobile view -->
-                    <div class="swiper-container md:hidden w-full">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
-                                    <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                                        <div class="w-full h-[290px] bg-black overflow-hidden">
-                                            <img class="w-full" src="staff/Ballespin.jpg" alt="">
-                                        </div>
-                                        <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                            <h1 class="text-xl">Hannah Marie B. Ballespin</h1>
-                                            <h2 class="pb-4 text-gray-400">hmblspn.sunstar@gmail.com</h2>
-                                            <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                            <h2 class="pb-2">+639051689876</h2>
-                                            <div class="w-full">
-                                                <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                            </div>
-                                        </div>
+                </div>
+        
+                <!-- Swiper for mobile view -->
+                <div class="swiper-container md:hidden w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
+                                <div class="w-[300px] h-[500px] bg-white shadow-xl">
+                                    <div class="w-full h-[290px] bg-black overflow-hidden">
+                                        <img class="w-full" src="staff/Ballespin.jpg" alt="">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
-                                    <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                                        <div class="w-full h-[290px] bg-black overflow-hidden">
-                                            <img class="w-full" src="staff/Bastinen.jpg" alt="">
-                                        </div>
-                                        <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                            <h1 class="text-xl">Jean V. Bastinen</h1>
-                                            <h2 class="pb-4 text-gray-400">jeanbastinens4@gmail.com</h2>
-                                            <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                            <h2 class="pb-2">+639190918057</h2>
-                                            <div class="w-full">
-                                                <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
-                                    <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                                        <div class="w-full h-[290px] bg-black overflow-hidden">
-                                            <img class="w-full" src="staff/Libor.jpg" alt="">
-                                        </div>
-                                        <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                            <h1 class="text-xl">Marichu Eyac-Libor</h1>
-                                            <h2 class="pb-4 text-gray-400">marichulibor.sunstarcebu@gmail.com</h2>
-                                            <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                            <h2 class="pb-2">+639273505074</h2>
-                                            <div class="w-full">
-                                                <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
-                                    <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                                        <div class="w-full h-[290px] bg-black overflow-hidden">
-                                            <img class="w-full" src="staff/Villarin.jpg" alt="">
-                                        </div>
-                                        <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                            <h1 class="text-xl">Gerramae O. Villarin</h1>
-                                            <h2 class="pb-4 text-gray-400">gerravillarin.sunstar@gmail.com</h2>
-                                            <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                            <h2 class="pb-2">+63915-392-0440</h2>
-                                            <div class="w-full">
-                                                <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                            </div>
+                                    <div class="w-full h-[210px] flex flex-col justify-center pl-4">
+                                        <h1 class="text-xl">Hannah Marie B. Ballespin</h1>
+                                        <h2 class="pb-4 text-gray-400">hmblspn.sunstar@gmail.com</h2>
+                                        <h2 class="pb-4 text-gray-400">Account Consultant</h2>
+                                        <h2 class="pb-2">+639051689876</h2>
+                                        <div class="w-full">
+                                            <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Swiper Pagination -->
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide">
+                            <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
+                                <div class="w-[300px] h-[500px] bg-white shadow-xl">
+                                    <div class="w-full h-[290px] bg-black overflow-hidden">
+                                        <img class="w-full" src="staff/Bastinen.jpg" alt="">
+                                    </div>
+                                    <div class="w-full h-[210px] flex flex-col justify-center pl-4">
+                                        <h1 class="text-xl">Jean V. Bastinen</h1>
+                                        <h2 class="pb-4 text-gray-400">jeanbastinens4@gmail.com</h2>
+                                        <h2 class="pb-4 text-gray-400">Account Consultant</h2>
+                                        <h2 class="pb-2">+639190918057</h2>
+                                        <div class="w-full">
+                                            <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
+                                <div class="w-[300px] h-[500px] bg-white shadow-xl">
+                                    <div class="w-full h-[290px] bg-black overflow-hidden">
+                                        <img class="w-full" src="staff/Libor.jpg" alt="">
+                                    </div>
+                                    <div class="w-full h-[210px] flex flex-col justify-center pl-4">
+                                        <h1 class="text-xl">Marichu Eyac-Libor</h1>
+                                        <h2 class="pb-4 text-gray-400">marichulibor.sunstarcebu@gmail.com</h2>
+                                        <h2 class="pb-4 text-gray-400">Account Consultant</h2>
+                                        <h2 class="pb-2">+639273505074</h2>
+                                        <div class="w-full">
+                                            <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
+                                <div class="w-[300px] h-[500px] bg-white shadow-xl">
+                                    <div class="w-full h-[290px] bg-black overflow-hidden">
+                                        <img class="w-full" src="staff/Villarin.jpg" alt="">
+                                    </div>
+                                    <div class="w-full h-[210px] flex flex-col justify-center pl-4">
+                                        <h1 class="text-xl">Gerramae O. Villarin</h1>
+                                        <h2 class="pb-4 text-gray-400">gerravillarin.sunstar@gmail.com</h2>
+                                        <h2 class="pb-4 text-gray-400">Account Consultant</h2>
+                                        <h2 class="pb-2">+639153920440</h2>
+                                        <div class="w-full">
+                                            <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- Add pagination dots for Swiper -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
 
-        <section class="">
-            <div class="pb-4 w-full">
-                <h1 class="text-2xl text-center pt-16 pb-8">SALES TEAM</h1>
-                <p class="text-xl text-center pb-16">Partner with us to grow your brand and connect with your target market.</p>
-                <div class="w-full flex justify-center">
-                    <!-- Desktop view, display flex for horizontal alignment -->
-                    <div class="hidden md:flex w-[98%] justify-evenly">
-                        <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                            <div class="w-full h-[290px] bg-black overflow-hidden">
-                                <img class="w-full" src="staff/Ballespin.jpg" alt="">
-                            </div>
-                            <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                <h1 class="text-xl">Hannah Marie B. Ballespin</h1>
-                                <h2 class="pb-4 text-gray-400">hmblspn.sunstar@gmail.com</h2>
-                                <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                <h2 class="pb-2">+639051689876</h2>
-                                <div class="w-full">
-                                    <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                            <div class="w-full h-[290px] bg-black overflow-hidden">
-                                <img class="w-full" src="staff/Bastinen.jpg" alt="">
-                            </div>
-                            <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                <h1 class="text-xl">Jean V. Bastinen</h1>
-                                <h2 class="pb-4 text-gray-400">jeanbastinens4@gmail.com</h2>
-                                <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                <h2 class="pb-2">+639190918057</h2>
-                                <div class="w-full">
-                                    <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                            <div class="w-full h-[290px] bg-black overflow-hidden">
-                                <img class="w-full" src="staff/Libor.jpg" alt="">
-                            </div>
-                            <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                <h1 class="text-xl">Marichu Eyac-Libor</h1>
-                                <h2 class="pb-4 text-gray-400">marichulibor.sunstarcebu@gmail.com</h2>
-                                <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                <h2 class="pb-2">+639273505074</h2>
-                                <div class="w-full">
-                                    <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                            <div class="w-full h-[290px] bg-black overflow-hidden">
-                                <img class="w-full" src="staff/Villarin.jpg" alt="">
-                            </div>
-                            <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                <h1 class="text-xl">Gerramae O. Villarin</h1>
-                                <h2 class="pb-4 text-gray-400">gerravillarin.sunstar@gmail.com</h2>
-                                <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                <h2 class="pb-2">+63915-392-0440</h2>
-                                <div class="w-full">
-                                    <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Swiper for mobile view -->
-                    <div class="swiper-container md:hidden w-full">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
-                                    <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                                        <div class="w-full h-[290px] bg-black overflow-hidden">
-                                            <img class="w-full" src="staff/Ballespin.jpg" alt="">
-                                        </div>
-                                        <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                            <h1 class="text-xl">Hannah Marie B. Ballespin</h1>
-                                            <h2 class="pb-4 text-gray-400">hmblspn.sunstar@gmail.com</h2>
-                                            <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                            <h2 class="pb-2">+639051689876</h2>
-                                            <div class="w-full">
-                                                <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
-                                    <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                                        <div class="w-full h-[290px] bg-black overflow-hidden">
-                                            <img class="w-full" src="staff/Bastinen.jpg" alt="">
-                                        </div>
-                                        <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                            <h1 class="text-xl">Jean V. Bastinen</h1>
-                                            <h2 class="pb-4 text-gray-400">jeanbastinens4@gmail.com</h2>
-                                            <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                            <h2 class="pb-2">+639190918057</h2>
-                                            <div class="w-full">
-                                                <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
-                                    <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                                        <div class="w-full h-[290px] bg-black overflow-hidden">
-                                            <img class="w-full" src="staff/Libor.jpg" alt="">
-                                        </div>
-                                        <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                            <h1 class="text-xl">Marichu Eyac-Libor</h1>
-                                            <h2 class="pb-4 text-gray-400">marichulibor.sunstarcebu@gmail.com</h2>
-                                            <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                            <h2 class="pb-2">+639273505074</h2>
-                                            <div class="w-full">
-                                                <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="w-[300px] h-[500px] bg-white shadow-xl mx-auto">
-                                    <div class="w-[300px] h-[500px] bg-white shadow-xl">
-                                        <div class="w-full h-[290px] bg-black overflow-hidden">
-                                            <img class="w-full" src="staff/Villarin.jpg" alt="">
-                                        </div>
-                                        <div class="w-full h-[210px] flex flex-col justify-center pl-4">
-                                            <h1 class="text-xl">Gerramae O. Villarin</h1>
-                                            <h2 class="pb-4 text-gray-400">gerravillarin.sunstar@gmail.com</h2>
-                                            <h2 class="pb-4 text-gray-400">Account Consultant</h2>
-                                            <h2 class="pb-2">+63915-392-0440</h2>
-                                            <div class="w-full">
-                                                <button class="bg-[#ffeb3b] w-[95%] p-2">Contact</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Swiper Pagination -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
 
         <script>
