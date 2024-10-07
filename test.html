@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="img/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <!-- <script src="swiper.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Advertise with Us</title>
+
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+        .swiper-pagination-bullet {
+    background-color: gray; /* Yellow color */
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #ffeb3b; /* Same yellow for active dot */
+    opacity: 1;
+  }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    
+
+    
+
+    <section class="flex flex-col md:flex-row bg-gray-200 p-6">
+        <!-- Left Div -->
+        <div class="flex-1 bg-white shadow-lg p-4 mx-2 w-full md:w-1/2">
+            <div class="swiper-container-a w-full overflow-hidden">
+                <div class="flex w-full justify-center mt-4">
+                    <center>
+                        <div class="swiper-pagination-a"></div>
+                    </center>
+                </div>
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 (Hannah Marie B. Ballespin) -->
+                    <div class="swiper-slide">
+                        <div class="w-full h-[500px] shadow-xl mx-auto">
+                            <img class="h-full" src="img/1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="w-full h-[500px] shadow-xl mx-auto">
+                            <img class="h-full" src="img/2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="w-full h-[500px] shadow-xl mx-auto">
+                            <img class="h-full" src="img/3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Counter -->
+            <div class="text-center mt-2">
+                <span class="current-slide">1</span> / <span class="total-slides">3</span>
+            </div>
+        </div>
+    
+        <!-- Right Div -->
+        <div class="flex-1 bg-white shadow-lg p-4 mx-2 w-full md:w-1/2">
+            <div class="flex flex-col flex-wrap lg:py-6 -mb-10 w-full lg:pl-12 lg:text-left text-center">
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Targeted Audience Engagement</h2>
+                        <p class="leading-relaxed text-base">Our advanced targeting ensures your ads reach the right audience, maximizing engagement and conversions while effectively connecting you with potential customers.</p>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Data-Driven Results</h2>
+                        <p class="leading-relaxed text-base">We use cutting-edge analytics and performance tracking to optimize your ad campaigns, refining strategies in real-time for the best ROI and measurable results.</p>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Creative Excellence</h2>
+                        <p class="leading-relaxed text-base">Our skilled team creates compelling, visually appealing ads that capture attention and resonate with your audience, prioritizing creativity to help your brand stand out.</p>
+                    </div>
+                </div>
+    
+                
+            </div>
+        </div>
+    </section>
+    
+    
+
+    
+
+   
+
+    
+
+    
+
+    <script>
+        var swiper1 = new Swiper(".swiper-container-a", {
+            loop: true,
+            autoplay: {
+                delay: 3000, // Change slide every 3 seconds
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination-a",
+                clickable: true,
+                bulletClass: 'swiper-pagination-bullet',
+                bulletActiveClass: 'swiper-pagination-bullet-active',
+            },
+            on: {
+                init: function () {
+                    updateCounter(this);
+                },
+                slideChange: function () {
+                    updateCounter(this);
+                }
+            }
+        });
+    
+        function updateCounter(swiper) {
+            var currentIndex = swiper.realIndex + 1; // Swiper's real index is 0-based
+           
+            document.querySelector('.current-slide').textContent = currentIndex;
+            
+        }
+    </script>
+
+</body>
+
+</html>
